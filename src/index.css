@@ -7,3 +7,10 @@ body,
     height: 100%;
     overflow: hidden;
 }
+
+.htmlScreen iframe {
+    width: 1170px;
+    height: 580px;
+    border: none;
+    background: #000000;
+}
