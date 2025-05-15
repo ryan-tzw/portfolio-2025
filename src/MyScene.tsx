@@ -8,8 +8,29 @@ import * as THREE from 'three'
 import { useGLTF, useTexture } from '@react-three/drei'
 import Bulletin from './Bulletin.tsx'
 import Screen from './Screen.tsx'
+import { MathProps, ReactProps, EventHandlers, InstanceProps } from '@react-three/fiber'
+import { Mutable, Overwrite } from '@react-three/fiber/dist/declarations/src/core/utils'
+import { JSX } from 'react/jsx-runtime'
 
-export function MyScene(props) {
+export function MyScene(
+    props: JSX.IntrinsicAttributes &
+        Mutable<
+            Overwrite<
+                Partial<
+                    Overwrite<
+                        THREE.Group<THREE.Object3DEventMap>,
+                        MathProps<THREE.Group<THREE.Object3DEventMap>> &
+                            ReactProps<THREE.Group<THREE.Object3DEventMap>> &
+                            Partial<EventHandlers>
+                    >
+                >,
+                Omit<
+                    InstanceProps<THREE.Group<THREE.Object3DEventMap>, typeof THREE.Group>,
+                    'object'
+                >
+            >
+        >
+) {
     const { nodes } = useGLTF('./portfolio-2025-transformed.glb')
 
     // Baked texture
