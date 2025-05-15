@@ -10,7 +10,7 @@ export default function Screen() {
     return (
         <>
             <mesh
-                geometry={nodes.screen.geometry}
+                geometry={(nodes.screen as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[-0.522, 0.687, 1.731]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}

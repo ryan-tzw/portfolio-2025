@@ -1,6 +1,5 @@
-import { useGLTF, OrbitControls } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { MyScene } from './MyScene.tsx'
 
@@ -13,7 +12,7 @@ export default function Experience() {
     lookPosition.y += 0.3
 
     // default camera position
-    const defaultCameraPosition = new THREE.Vector3(-0.5, 1.3, 0)
+    const defaultCameraPosition = new THREE.Vector3(-0.5, 1.3, 0.5)
 
     useFrame(() => {
         // Move the camera with the mouse

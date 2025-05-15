@@ -20,56 +20,56 @@ export function MyScene(props) {
     return (
         <group {...props} dispose={null}>
             <mesh
-                geometry={nodes.desk.geometry}
+                geometry={(nodes.desk as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[-0.493, 0.571, 1.548]}
                 rotation={[0, 1.571, 0]}
             />
             <mesh
-                geometry={nodes.keyboard.geometry}
+                geometry={(nodes.keyboard as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[-0.296, 0.712, 1.387]}
                 rotation={[-0.002, 0.183, 0.001]}
             />
             <mesh
-                geometry={nodes.mousepad.geometry}
+                geometry={(nodes.mousepad as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[-0.493, 0.69, 1.366]}
             />
-            <mesh geometry={nodes.wall.geometry} material={bakedMaterial} />
+            <mesh geometry={(nodes.wall as THREE.Mesh).geometry} material={bakedMaterial} />
             <mesh
-                geometry={nodes.mouse.geometry}
+                geometry={(nodes.mouse as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[-0.806, 0.691, 1.379]}
                 rotation={[0, -0.155, 0]}
             />
             <mesh
-                geometry={nodes.chair.geometry}
+                geometry={(nodes.chair as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[-1.169, 0.235, 0.695]}
                 rotation={[0, 1.05, 0]}
             />
-            <mesh geometry={nodes.floor.geometry} material={bakedMaterial} />
+            <mesh geometry={(nodes.floor as THREE.Mesh).geometry} material={bakedMaterial} />
             <mesh
-                geometry={nodes.mug.geometry}
+                geometry={(nodes.mug as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[0.147, 0.742, 1.554]}
                 rotation={[0, 0.616, 0]}
             />
             <mesh
-                geometry={nodes.pc.geometry}
+                geometry={(nodes.pc as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[0.485, 0.009, 1.657]}
                 rotation={[0, -1.571, 0]}
             />
             <mesh
-                geometry={nodes.plant.geometry}
+                geometry={(nodes.plant as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[-1.629, 0.012, 1.584]}
                 rotation={[Math.PI, -0.336, Math.PI]}
             />
             <mesh
-                geometry={nodes.coaster.geometry}
+                geometry={(nodes.coaster as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[0.147, 0.688, 1.552]}
             />

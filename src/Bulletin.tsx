@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { useGLTF, useTexture } from '@react-three/drei'
-import { useMemo, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 
 export default function Bulletin() {
@@ -24,13 +24,13 @@ export default function Bulletin() {
         setHovered(false)
     }
 
-    const overlayRef = useRef(null)
+    const overlayRef = useRef<THREE.MeshBasicMaterial>(null)
     const opacityRef = useRef(0)
 
     useFrame((_, delta) => {
         if (!overlayRef.current) return
         // Target value based on hover state
-        const target = hovered ? 0.35 : 0
+        const target = hovered ? 0.2 : 0
         // Damped interpolation
         opacityRef.current += (target - opacityRef.current) * 8 * delta
         overlayRef.current.opacity = opacityRef.current
@@ -42,7 +42,7 @@ export default function Bulletin() {
                 onClick={onClick}
                 onPointerOver={onPointerOver}
                 onPointerOut={onPointerOut}
-                geometry={nodes.bulletin.geometry}
+                geometry={(nodes.bulletin as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[0.78, 0.938, 1.916]}
                 rotation={[0, 1.571, 0]}
@@ -50,7 +50,7 @@ export default function Bulletin() {
 
             {/* Highlight; might be a bit janky but ig it works */}
             <mesh
-                geometry={nodes.bulletin.geometry}
+                geometry={(nodes.bulletin as THREE.Mesh).geometry}
                 position={[0.78, 0.938, 1.916]}
                 rotation={[0, 1.571, 0]}
             >
