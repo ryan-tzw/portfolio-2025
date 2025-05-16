@@ -17,6 +17,7 @@ export default function Screen() {
             >
                 <Html
                     transform
+                    occlude="blending"
                     wrapperClass="htmlScreen"
                     distanceFactor={0.364}
                     position={[0.025, 0.0275, -0.415]}

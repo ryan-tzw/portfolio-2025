@@ -11,6 +11,7 @@ import Screen from './Screen.tsx'
 import { MathProps, ReactProps, EventHandlers, InstanceProps } from '@react-three/fiber'
 import { Mutable, Overwrite } from '@react-three/fiber/dist/declarations/src/core/utils'
 import { JSX } from 'react/jsx-runtime'
+import Mug from './Mug.tsx'
 
 export function MyScene(
     props: JSX.IntrinsicAttributes &
@@ -72,12 +73,6 @@ export function MyScene(
             />
             <mesh geometry={(nodes.floor as THREE.Mesh).geometry} material={bakedMaterial} />
             <mesh
-                geometry={(nodes.mug as THREE.Mesh).geometry}
-                material={bakedMaterial}
-                position={[0.147, 0.742, 1.554]}
-                rotation={[0, 0.616, 0]}
-            />
-            <mesh
                 geometry={(nodes.pc as THREE.Mesh).geometry}
                 material={bakedMaterial}
                 position={[0.485, 0.009, 1.657]}
@@ -96,6 +91,7 @@ export function MyScene(
             />
             <Bulletin />
             <Screen />
+            <Mug />
         </group>
     )
 }
