@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import smokeVertexShader from './shaders/smoke/vertex.glsl'
 import smokeFragmentShader from './shaders/smoke/fragment.glsl'
 import { extend, useFrame, useThree } from '@react-three/fiber'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { ShaderMaterial } from 'three'
 import { ThreeElement } from '@react-three/fiber'
 
