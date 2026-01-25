@@ -23,7 +23,7 @@ export default function Screen() {
                     position={[0.025, 0.0275, -0.415]}
                     rotation={[Math.PI * 1.5, Math.PI / 2, 0]}
                 >
-                    <iframe src="https://basic-site-rtzw.vercel.app/" />
+                    <iframe src="https://www.ryantzw.dev/" />
                 </Html>
             </mesh>
         </>
