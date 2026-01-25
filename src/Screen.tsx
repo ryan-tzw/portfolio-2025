@@ -19,8 +19,8 @@ export default function Screen() {
                     transform
                     occlude="blending"
                     wrapperClass="htmlScreen"
-                    distanceFactor={0.364}
-                    position={[0.025, 0.0275, -0.415]}
+                    distanceFactor={0.235}
+                    position={[0.0245, 0.0275, -0.415]}
                     rotation={[Math.PI * 1.5, Math.PI / 2, 0]}
                 >
                     <iframe src="https://www.ryantzw.dev/" />
