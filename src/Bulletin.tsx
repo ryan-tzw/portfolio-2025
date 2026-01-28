@@ -14,7 +14,7 @@ export default function Bulletin() {
     const [hovered, setHovered] = useState(false)
 
     const onClick = () => {
-        window.open('./resume_masked.pdf', '_blank')
+        window.open('./resume_1.pdf', '_blank')
     }
 
     const onPointerOver = () => {
